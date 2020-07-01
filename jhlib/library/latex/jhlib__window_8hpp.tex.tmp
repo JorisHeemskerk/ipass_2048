@@ -1,0 +1,13 @@
+\hypertarget{jhlib__window_8hpp}{}\section{jhlib\+\_\+window.\+hpp File Reference}
+\label{jhlib__window_8hpp}\index{jhlib\+\_\+window.\+hpp@{jhlib\+\_\+window.\+hpp}}
+{\ttfamily \#include \char`\"{}hwlib.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}W\+S2812\+B.\+hpp\char`\"{}}\newline
+Include dependency graph for jhlib\+\_\+window.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classjhlib_1_1jhlib__window}{jhlib\+::jhlib\+\_\+window}
+\begin{DoxyCompactList}\small\item\em This class lets a user make a window containing \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}

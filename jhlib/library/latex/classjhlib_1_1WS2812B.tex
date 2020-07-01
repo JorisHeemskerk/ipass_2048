@@ -1,0 +1,88 @@
+\hypertarget{classjhlib_1_1WS2812B}{}\section{jhlib\+:\+:W\+S2812B Class Reference}
+\label{classjhlib_1_1WS2812B}\index{jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}}
+
+
+This class lets a user define and controll a certain amount of \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} L\+E\+Ds.  
+
+
+
+
+{\ttfamily \#include $<$W\+S2812\+B.\+hpp$>$}
+
+
+
+Inheritance diagram for jhlib\+:\+:W\+S2812B\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjhlib_1_1WS2812B_a421968f5ea0be36b24a1187da4b858db}{W\+S2812B} (hwlib\+::pin\+\_\+out \&gpio, const unsigned int led\+\_\+amount)
+\begin{DoxyCompactList}\small\item\em This constructor lets the user define a gpio pin and a amount of L\+E\+Ds. \end{DoxyCompactList}\item 
+void \hyperlink{classjhlib_1_1WS2812B_a1ee14275e07d0fcd6e19034df0518385}{draw} (unsigned int position, int rgb)
+\begin{DoxyCompactList}\small\item\em This public function write lets the user change a certain L\+ED using a H\+EX value. \end{DoxyCompactList}\item 
+void \hyperlink{classjhlib_1_1WS2812B_acc0da0a0477c66d665ae9a8cf78c0a8d}{draw} (unsigned int position, int R, int G, int B)
+\begin{DoxyCompactList}\small\item\em This public function write lets the user change a certain L\+ED using three int values. \end{DoxyCompactList}\item 
+void \hyperlink{classjhlib_1_1WS2812B_ac7a20c6eadaafa1449bada58669bc7c6}{flush} ()
+\begin{DoxyCompactList}\small\item\em This public function displays the written values to the L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class lets a user define and controll a certain amount of \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} L\+E\+Ds. 
+
+To use this class call it with a hwlib\+::pin\+\_\+out() and a const unsigned int with the amount of L\+E\+Ds. ~\newline
+ To write a collor to a L\+ED try variable.\+write(number, collor). Afterwards do variable.\+flush(). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjhlib_1_1WS2812B_a421968f5ea0be36b24a1187da4b858db}\label{classjhlib_1_1WS2812B_a421968f5ea0be36b24a1187da4b858db}} 
+\index{jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}!W\+S2812B@{W\+S2812B}}
+\index{W\+S2812B@{W\+S2812B}!jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}}
+\subsubsection{\texorpdfstring{W\+S2812\+B()}{WS2812B()}}
+{\footnotesize\ttfamily jhlib\+::\+W\+S2812\+B\+::\+W\+S2812B (\begin{DoxyParamCaption}\item[{hwlib\+::pin\+\_\+out \&}]{gpio,  }\item[{const unsigned int}]{led\+\_\+amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This constructor lets the user define a gpio pin and a amount of L\+E\+Ds. 
+
+In addition to letting the user define a gpio and a led\+\_\+amount it also sets the needed numbers in the std\+::array$<$unsigned int, 1000$>$ leds; to 0. ~\newline
+ This is done to make sure no unwanted values are saved in the data slots of the array. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjhlib_1_1WS2812B_a1ee14275e07d0fcd6e19034df0518385}\label{classjhlib_1_1WS2812B_a1ee14275e07d0fcd6e19034df0518385}} 
+\index{jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}!draw@{draw}}
+\index{draw@{draw}!jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void jhlib\+::\+W\+S2812\+B\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{position,  }\item[{int}]{rgb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This public function write lets the user change a certain L\+ED using a H\+EX value. 
+
+To call this function simply give it a position (the first L\+ED is position 0) and a H\+EX value in the shape of 0x\+R\+R\+G\+G\+BB. ~\newline
+ The function will check if the given grb value is to high or low an will correct it accordingly. ~\newline
+ After this the function will convert and add the given color to the array leds in the correct position. \mbox{\Hypertarget{classjhlib_1_1WS2812B_acc0da0a0477c66d665ae9a8cf78c0a8d}\label{classjhlib_1_1WS2812B_acc0da0a0477c66d665ae9a8cf78c0a8d}} 
+\index{jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}!draw@{draw}}
+\index{draw@{draw}!jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void jhlib\+::\+W\+S2812\+B\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{position,  }\item[{int}]{R,  }\item[{int}]{G,  }\item[{int}]{B }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This public function write lets the user change a certain L\+ED using three int values. 
+
+To call this function simply give it a position (the first L\+ED is position 0) and three int values in the shape of int red, int green, int blue. ~\newline
+ The function will check if the given rgb value is to high or low an will correct it accordingly. ~\newline
+ After this the function will convert and add the given color to the array leds in the correct position. \mbox{\Hypertarget{classjhlib_1_1WS2812B_ac7a20c6eadaafa1449bada58669bc7c6}\label{classjhlib_1_1WS2812B_ac7a20c6eadaafa1449bada58669bc7c6}} 
+\index{jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}!flush@{flush}}
+\index{flush@{flush}!jhlib\+::\+W\+S2812B@{jhlib\+::\+W\+S2812B}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void jhlib\+::\+W\+S2812\+B\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This public function displays the written values to the L\+E\+Ds. 
+
+If called this function will loop through the array leds (containing all G\+RB values) and it will write zeros and ones to the L\+E\+Ds accordingly. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{WS2812B_8hpp}{W\+S2812\+B.\+hpp}\end{DoxyCompactItemize}

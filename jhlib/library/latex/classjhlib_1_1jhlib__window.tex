@@ -1,0 +1,63 @@
+\hypertarget{classjhlib_1_1jhlib__window}{}\section{jhlib\+:\+:jhlib\+\_\+window Class Reference}
+\label{classjhlib_1_1jhlib__window}\index{jhlib\+::jhlib\+\_\+window@{jhlib\+::jhlib\+\_\+window}}
+
+
+This class lets a user make a window containing \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} L\+E\+Ds.  
+
+
+
+
+{\ttfamily \#include $<$jhlib\+\_\+window.\+hpp$>$}
+
+
+
+Inheritance diagram for jhlib\+:\+:jhlib\+\_\+window\+:
+% FIG 0
+
+
+Collaboration diagram for jhlib\+:\+:jhlib\+\_\+window\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjhlib_1_1jhlib__window_ac2679bd5cd146f19826ac694359f6f60}{jhlib\+\_\+window} (const hwlib\+::xy \&size, hwlib\+::pin\+\_\+out \&gpio)
+\begin{DoxyCompactList}\small\item\em This constructor lets the user make a window out of \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} L\+E\+Ds. \end{DoxyCompactList}\item 
+void \hyperlink{classjhlib_1_1jhlib__window_a99393d541e7e42b65c4a1b5421696118}{flush} () override
+\begin{DoxyCompactList}\small\item\em This flush function will flush the saved L\+ED data onto the L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class lets a user make a window containing \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} L\+E\+Ds. 
+
+To use this class call it with a hwlib\+::xy(x, y) as size and a hwlib\+::target\+::pin\+\_\+out gpio pin. ~\newline
+ To write a collor to a L\+ED try window.\+write(hwlib\+::xy(x, y), hwlib\+::color). Afterwards do window.\+flush(). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjhlib_1_1jhlib__window_ac2679bd5cd146f19826ac694359f6f60}\label{classjhlib_1_1jhlib__window_ac2679bd5cd146f19826ac694359f6f60}} 
+\index{jhlib\+::jhlib\+\_\+window@{jhlib\+::jhlib\+\_\+window}!jhlib\+\_\+window@{jhlib\+\_\+window}}
+\index{jhlib\+\_\+window@{jhlib\+\_\+window}!jhlib\+::jhlib\+\_\+window@{jhlib\+::jhlib\+\_\+window}}
+\subsubsection{\texorpdfstring{jhlib\+\_\+window()}{jhlib\_window()}}
+{\footnotesize\ttfamily jhlib\+::jhlib\+\_\+window\+::jhlib\+\_\+window (\begin{DoxyParamCaption}\item[{const hwlib\+::xy \&}]{size,  }\item[{hwlib\+::pin\+\_\+out \&}]{gpio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This constructor lets the user make a window out of \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} L\+E\+Ds. 
+
+To do so it will make a hwlib\+::window allongside with a \hyperlink{classjhlib_1_1WS2812B}{W\+S2812B} class to define the gpio and size of the L\+ED strip. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjhlib_1_1jhlib__window_a99393d541e7e42b65c4a1b5421696118}\label{classjhlib_1_1jhlib__window_a99393d541e7e42b65c4a1b5421696118}} 
+\index{jhlib\+::jhlib\+\_\+window@{jhlib\+::jhlib\+\_\+window}!flush@{flush}}
+\index{flush@{flush}!jhlib\+::jhlib\+\_\+window@{jhlib\+::jhlib\+\_\+window}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void jhlib\+::jhlib\+\_\+window\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+This flush function will flush the saved L\+ED data onto the L\+E\+Ds. 
+
+This function simply calls the \hyperlink{classjhlib_1_1WS2812B_ac7a20c6eadaafa1449bada58669bc7c6}{W\+S2812\+B\+::flush}, causing all saved L\+ED data to be displayed onto the L\+E\+Ds. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jhlib__window_8hpp}{jhlib\+\_\+window.\+hpp}\end{DoxyCompactItemize}

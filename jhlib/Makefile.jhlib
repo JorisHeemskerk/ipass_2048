@@ -1,0 +1,5 @@
+HEADERS += WS2812B.hpp 
+HEADERS += jhlib_window.hpp 
+HEADERS += jhlib.hpp 
+
+SEARCH  += $(RELATIVE)/library/
